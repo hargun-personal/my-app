@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import AppHeader from './components/app-header.component'
+import AppHome from './components/app-home.component'
+import AppFooter from './components/app-footer.component'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+var a = {
+    'net': 23,
+    'f': 'sd'
 }
-
-export default App;
+export class App extends Component {
+    render () {
+        return (
+        <>
+            <AppHeader size={a} />
+            <AppHome/>
+            <AppFooter link="https://conceptarchitect.in" text="Concept Architect"/>
+        </>
+        )
+    }
+}
